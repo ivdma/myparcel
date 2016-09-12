@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - 'Rakefile'
+    - 'Guardfile'
+    - 'bin/**/*'
+
+Metrics/LineLength:
+  Max: 104
