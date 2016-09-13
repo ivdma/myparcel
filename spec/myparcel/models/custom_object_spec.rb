@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Myparcel::Models::CustomObject do
   describe 'attributes' do
-
     subject(:custom_object) do
       described_class.new \
         description: 'Foo',
@@ -32,6 +31,10 @@ describe Myparcel::Models::CustomObject do
     end
 
     describe '#item_value' do
+      it 'is a Price' do
+        expect(custom_object.item_value).to be_a Myparcel::Models::Price
+      end
+
       it 'defines correct method' do
         expect(custom_object.item_value.amount).to eq 500
         expect(custom_object.item_value.currency).to eq 'EUR'
