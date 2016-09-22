@@ -1,7 +1,7 @@
 module Myparcel
   module Models
-    # Defines Pickup Location object
-    class PickupLocation
+    # Defines Shipment Options
+    class ShipmentOptions
       include Virtus.model
 
       attribute :package_type,      Integer
@@ -11,7 +11,7 @@ module Myparcel
       attribute :only_recipient,    Boolean
       attribute :signature,         Boolean
       attribute :return,            Boolean
-      attribute :insurance,         Price
+      attribute :insurance,         Integer
       attribute :large_format,      Boolean
       attribute :label_description, String
     end

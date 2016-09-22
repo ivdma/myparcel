@@ -1,6 +1,6 @@
 module Myparcel
   module Models
-    # A custom object
+    # Defines a Custom Object
     class CustomObject
       include Virtus.model
 

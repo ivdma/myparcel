@@ -1,5 +1,6 @@
 module Myparcel
   module Models
+    # Defines Shipment General Settings
     class ShipmentGeneralSettings
       include Virtus.model
 

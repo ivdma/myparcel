@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Myparcel::Models::Address do
   describe 'attributes' do
-
     subject(:address) do
       described_class.new \
         cc: 'NL',

@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Myparcel::Models::Price do
   describe 'attributes' do
-
     subject(:price) { described_class.new amount: 500, currency: 'EUR' }
 
     describe '#amount' do

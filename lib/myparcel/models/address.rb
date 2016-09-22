@@ -1,5 +1,6 @@
 module Myparcel
   module Models
+    # Defines Address Object
     class Address
       include Virtus.model
 
