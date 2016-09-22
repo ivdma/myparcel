@@ -1,7 +1,7 @@
 module Myparcel
   module Models
     # Defines a Custom Object
-    class CustomObject
+    class CustomItem
       include Virtus.model
 
       attribute :description,    String
