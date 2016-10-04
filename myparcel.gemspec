@@ -21,12 +21,17 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'httparty',           '~> 0.14.0'
   spec.add_dependency 'active_interaction', '~> 3.2'
+  spec.add_dependency 'virtus'
 
-  spec.add_development_dependency 'bundler', '~> 1.12'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'bundler',       '~> 1.12'
+  spec.add_development_dependency 'rake',          '~> 10.0'
+  spec.add_development_dependency 'rspec',         '~> 3.0'
   spec.add_development_dependency 'guard-bundler', '~> 2.1'
-  spec.add_development_dependency 'guard-rspec', '~> 4.7'
+  spec.add_development_dependency 'guard-rspec',   '~> 4.7'
   spec.add_development_dependency 'guard-rubocop'
-  spec.add_development_dependency 'rubocop', '~> 0.42'
+  spec.add_development_dependency 'rubocop',       '~> 0.42'
+  spec.add_development_dependency 'webmock',       '~> 1.24'
+  spec.add_development_dependency 'vcr',           '~> 3.0'
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'timecop'
 end
