@@ -4,10 +4,10 @@ module Myparcel
     class CustomsDeclaration
       include Virtus.model
 
-      attribute :contents, PackageContents
+      attribute :contents, String
       attribute :invoice, String
       attribute :weight, Integer
-      attribute :items, Array # Array[CustomItem]
+      attribute :items, Array[Myparcel::Models::CustomsItem]
     end
   end
 end

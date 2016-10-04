@@ -1,12 +1,10 @@
 require 'spec_helper'
 
 describe Myparcel::Models::CustomsDeclaration do
-  let(:package_contents) { Myparcel::Models::PackageContents.new }
-
   describe 'attributes' do
     subject(:custom_object) do
       described_class.new \
-        contents: package_contents,
+        contents: 'something',
         invoice: 'foo',
         weight: 100,
         items: []
@@ -14,7 +12,7 @@ describe Myparcel::Models::CustomsDeclaration do
 
     describe '#contents' do
       it 'defines correct method' do
-        expect(custom_object.contents).to eq package_contents
+        expect(custom_object.contents).to eq 'something'
       end
     end
 
