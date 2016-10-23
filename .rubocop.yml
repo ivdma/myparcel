@@ -5,4 +5,4 @@ AllCops:
     - 'bin/**/*'
 
 Metrics/LineLength:
-  Max: 104
+  Max: 120
