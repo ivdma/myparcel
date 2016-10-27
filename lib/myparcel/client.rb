@@ -9,7 +9,7 @@ module Myparcel
     end
 
     def shipments
-      @shipments ||= Myparcel::Shipments.new(authentication)
+      @shipments ||= Myparcel::API::Shipments.new(authentication)
     end
   end
 end
