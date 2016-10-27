@@ -10,6 +10,7 @@ require 'myparcel/authentication'
 require 'myparcel/client'
 
 require 'myparcel/api/base'
+require 'myparcel/api/delivery_options'
 require 'myparcel/api/shipments'
 require 'myparcel/api/tracktraces'
 
