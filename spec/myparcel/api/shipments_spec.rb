@@ -36,6 +36,16 @@ describe Myparcel::API::Shipments do
         end
       end
     end
+
+    context 'by option' do
+      describe 'q' do
+        it 'searches shipment objects by given value' do
+          VCR.use_cassette :shipments do
+            expect(shipments.find(query: { q: '575' }).size).to eq 2 # 575 is price amount
+          end
+        end
+      end
+    end
   end
 
   describe '#create' do
@@ -84,15 +94,14 @@ describe Myparcel::API::Shipments do
     end
   end
 
-  describe '#delete', :focus do
+  describe '#delete' do
     it 'raises if options[:shipment_ids] is empty' do
       expect { shipments.delete }.to raise_error 'options[:shipment_ids] cannot be empty or nil'
     end
 
     it 'removes shipments' do
-      VCR.use_cassette :shipments, record: :new_episodes do
+      VCR.use_cassette :shipments do
         shipments.delete(shipment_ids: [18_923_677])
-
         expect(shipments.find(shipment_ids: [18_923_677])).to be_empty
       end
     end

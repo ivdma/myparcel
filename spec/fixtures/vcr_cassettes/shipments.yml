@@ -239,4 +239,43 @@ http_interactions:
       string: '{"data":{"shipments":[],"results":5000,"page":1,"size":0}}'
     http_version:
   recorded_at: Thu, 27 Oct 2016 10:29:41 GMT
+- request:
+    method: get
+    uri: https://api.myparcel.nl/shipments?q=575
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 27 Oct 2016 10:40:24 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"data":{"shipments":[{"barcode":null,"id":18923678,"parent_id":null,"account_id":104343,"shop_id":13812,"shipment_type":1,"recipient":{"cc":"NL","postal_code":"9999XX","city":"Amsterdam","street":"Hoofdstraat","number":"1","person":"John
+        Doe"},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
+        Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":1},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-27
+        11:55:32","modified":"2016-10-27 11:55:32","price":{"currency":"EUR","amount":575},"region":"NL"},{"barcode":null,"id":18923480,"parent_id":null,"account_id":104343,"shop_id":13812,"shipment_type":1,"recipient":{"cc":"NL","postal_code":"9999XX","city":"Amsterdam","street":"Hoofdstraat","number":"1","person":"John
+        Doe"},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
+        Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":1},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-27
+        11:50:03","modified":"2016-10-27 11:50:03","price":{"currency":"EUR","amount":575},"region":"NL"}],"results":2,"page":1,"size":2}}'
+    http_version:
+  recorded_at: Thu, 27 Oct 2016 10:39:53 GMT
 recorded_with: VCR 3.0.3

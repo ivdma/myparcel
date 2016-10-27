@@ -9,23 +9,13 @@ module Myparcel
         @authentication = authentication
       end
 
-      # def get(params = {})
-      #   response = HTTParty.get full_url(path, params), params: params, headers: headers
-      #   response['data'][data]
-      # end
-      #
-      # def post(params = {})
-      #   response = HTTParty.post full_url(path, params), params: params, headers: headers
-      #   response['data'][data]
-      # end
-
       protected
 
       def request(method, path, options = {})
         url = [authentication.host, path].join '/'
         httparty_options = {
-          query: options[:query],
-          body: options[:body],
+          query: options.fetch(:query, {}),
+          body: options.fetch(:body, ''),
           headers: authentication.headers.update(options[:headers] || {})
         }
         response = HTTParty.send method, url, httparty_options
