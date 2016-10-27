@@ -3,6 +3,7 @@ AllCops:
     - 'Rakefile'
     - 'Guardfile'
     - 'bin/**/*'
+    - 'myparcel.gemspec'
 
 Metrics/LineLength:
   Max: 120
