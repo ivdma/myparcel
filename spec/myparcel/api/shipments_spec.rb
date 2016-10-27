@@ -45,6 +45,23 @@ describe Myparcel::API::Shipments do
           end
         end
       end
+
+      describe 'subject' do
+        it 'does something' do
+          VCR.use_cassette :shipments do
+            expect(shipments.find(query: { dropoff_today: 1 }).size).to eq 17
+          end
+        end
+      end
+
+      describe 'from' do
+      end
+
+      describe 'to' do
+      end
+
+      describe 'status' do
+      end
     end
   end
 
