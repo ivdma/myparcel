@@ -9,8 +9,6 @@ require 'myparcel/version'
 require 'myparcel/authentication'
 require 'myparcel/client'
 
-require 'myparcel/shipment'
-
 require 'myparcel/api/base'
 require 'myparcel/api/shipments'
 
