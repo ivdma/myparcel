@@ -102,12 +102,6 @@ describe Myparcel::API::Shipments do
         end
       end
     end
-
-    describe '#headers_for_shipment' do
-      it 'returns correct header for standard shipment' do
-        expect(shipments.headers_for_shipment(:standard)).to eq 'application/vnd.shipment+json; charset=utf-8'
-      end
-    end
   end
 
   describe '#delete' do

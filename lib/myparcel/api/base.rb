@@ -11,6 +11,7 @@ module Myparcel
 
       protected
 
+      # rubocop:disable MethodLength
       def request(method, path, options = {})
         url = [authentication.host, path].join '/'
         httparty_options = {
@@ -26,7 +27,17 @@ module Myparcel
         when 422
           raise "Unprocessable entity for `#{method} #{url}` with #{httparty_options}."
         else
-          raise "Something went wrong"
+          raise 'Something went wrong'
+        end
+      end
+      # rubocop:enable MethodLength
+
+      def headers_for_shipment(type)
+        case type
+        when :standard then 'application/vnd.shipment+json; charset=utf-8'
+        when :return then 'application/vnd.return_shipment+json; charset=utf-8'
+        when :unrelated then 'application/vnd.unrelated_return_shipment+json; charset=utf-8'
+        else 'application/vnd.shipment+json; charset=utf-8'
         end
       end
     end

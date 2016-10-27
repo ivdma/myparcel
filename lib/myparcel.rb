@@ -11,6 +11,7 @@ require 'myparcel/client'
 
 require 'myparcel/api/base'
 require 'myparcel/api/shipments'
+require 'myparcel/api/tracktraces'
 
 # Ruby API Wrapper for https://api.myparcel.nl
 module Myparcel

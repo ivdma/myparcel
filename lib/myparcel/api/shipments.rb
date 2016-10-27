@@ -38,15 +38,6 @@ module Myparcel
         response['data']
       end
 
-      def headers_for_shipment(type)
-        case type
-        when :standard then 'application/vnd.shipment+json; charset=utf-8'
-        when :return then 'application/vnd.return_shipment+json; charset=utf-8'
-        when :unrelated then 'application/vnd.unrelated_return_shipment+json; charset=utf-8'
-        else 'application/vnd.shipment+json; charset=utf-8'
-        end
-      end
-
       def path
         'shipments'
       end
