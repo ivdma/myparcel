@@ -98,7 +98,7 @@ http_interactions:
         20:47:28","modified":"2016-10-05 20:47:28","price":{"currency":"EUR","amount":0},"region":"NL"},{"barcode":null,"id":18567775,"parent_id":null,"account_id":104343,"shop_id":13812,"shipment_type":1,"recipient":{"cc":"NL","postal_code":"9999ZZ","city":"Amsterdam","street":"Hoofdstraat","street_additional_info":"","number":"1","number_suffix":"","person":"Foo","company":"","email":"","phone":""},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
         Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":3,"delivery_type":2,"delivery_date":"2016-10-30T12:30:00.000+00:00","only_recipient":1,"signature":1,"return":0,"insurance":{"amount":5000,"currency":"USD"},"large_format":0,"label_description":"Iets"},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-05
         20:48:07","modified":"2016-10-05 20:48:07","price":{"currency":"EUR","amount":0},"region":"NL"}],"results":5000,"page":1,"size":2}}'
-    http_version: 
+    http_version:
   recorded_at: Sun, 23 Oct 2016 12:02:25 GMT
 - request:
     method: post
@@ -134,7 +134,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"ids":[{"id":18923480}]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 09:49:31 GMT
 - request:
     method: post
@@ -171,7 +171,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"ids":[{"id":18923677},{"id":18923678}]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 09:55:00 GMT
 - request:
     method: delete
@@ -204,7 +204,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 10:27:51 GMT
 - request:
     method: get
@@ -237,7 +237,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"shipments":[],"results":5000,"page":1,"size":0}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 10:29:41 GMT
 - request:
     method: get
@@ -276,7 +276,7 @@ http_interactions:
         Doe"},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
         Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":1},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-27
         11:50:03","modified":"2016-10-27 11:50:03","price":{"currency":"EUR","amount":575},"region":"NL"}],"results":2,"page":1,"size":2}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 10:39:53 GMT
 - request:
     method: get
@@ -345,7 +345,7 @@ http_interactions:
         Doe"},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
         Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":1},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-27
         11:55:32","modified":"2016-10-27 11:55:32","price":{"currency":"EUR","amount":575},"region":"NL"}],"results":5000,"page":1,"size":17}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 11:28:35 GMT
 - request:
     method: get
@@ -378,6 +378,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"shipments":[],"results":5000,"page":1,"size":0}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 11:50:12 GMT
 recorded_with: VCR 3.0.3

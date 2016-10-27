@@ -26,7 +26,7 @@ module Myparcel
         when 422
           raise "Unprocessable entity for `#{method} #{url}` with #{httparty_options}."
         else
-          raise response
+          raise "Something went wrong"
         end
       end
     end

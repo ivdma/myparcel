@@ -46,23 +46,17 @@ describe Myparcel::API::Shipments do
         end
       end
 
-      describe 'subject' do
-        it 'does something' do
+      describe 'dropoff_today' do
+        it 'gets shipments with dropoff_today set to true' do
           VCR.use_cassette :shipments do
             expect(shipments.find(query: { dropoff_today: 1 }).size).to eq 17
           end
         end
       end
 
-      describe 'from' do
-      end
-
-      describe 'to' do
-      end
-
       describe 'status' do
-        it 'does something' do
-          VCR.use_cassette :shipments, record: :new_episodes do
+        it 'gets shipments with status' do
+          VCR.use_cassette :shipments do
             expect(shipments.find(query: { status: 2 }).size).to eq 0
           end
         end
