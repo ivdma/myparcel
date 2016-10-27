@@ -28,6 +28,14 @@ module Myparcel
       end
 
       def delete(options = {})
+        shipment_ids = options.fetch :shipment_ids, []
+        raise 'options[:shipment_ids] cannot be empty or nil' if shipment_ids.empty?
+
+        shipment_ids = shipment_ids.join(';')
+        full_path = [path, shipment_ids].join('/')
+
+        response = request :delete, full_path, options
+        response['data']
       end
 
       def headers_for_shipment(type)

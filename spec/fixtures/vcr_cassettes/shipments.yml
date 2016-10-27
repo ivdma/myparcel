@@ -61,7 +61,7 @@ http_interactions:
         19:51:57","modified":"2016-10-12 19:51:57","price":{"currency":"EUR","amount":0},"region":"NL"},{"barcode":null,"id":18681359,"parent_id":null,"account_id":104343,"shop_id":13812,"shipment_type":1,"recipient":{"cc":"NL","postal_code":"9999ZZ","city":"Amsterdam","street":"Hoofdstraat","street_additional_info":"","number":"1","number_suffix":"","person":"Foo","company":"","email":"","phone":""},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
         Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":3,"delivery_type":2,"delivery_date":"2016-10-30T12:30:00.000+00:00","only_recipient":1,"signature":1,"return":0,"insurance":{"amount":5000,"currency":"USD"},"large_format":0,"label_description":"Iets"},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-12
         19:52:48","modified":"2016-10-12 19:52:48","price":{"currency":"EUR","amount":0},"region":"NL"}],"results":5000,"page":1,"size":15}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 20 Oct 2016 15:24:03 GMT
 - request:
     method: get
@@ -98,7 +98,7 @@ http_interactions:
         20:47:28","modified":"2016-10-05 20:47:28","price":{"currency":"EUR","amount":0},"region":"NL"},{"barcode":null,"id":18567775,"parent_id":null,"account_id":104343,"shop_id":13812,"shipment_type":1,"recipient":{"cc":"NL","postal_code":"9999ZZ","city":"Amsterdam","street":"Hoofdstraat","street_additional_info":"","number":"1","number_suffix":"","person":"Foo","company":"","email":"","phone":""},"sender":{"cc":"NL","postal_code":"9711AP","city":"Groningen","street":"Emmaplein","number":"1","number_suffix":"","person":"Henk
         Jan Wils","company":"PayPro BV","email":"henkjan@paypro.nl","phone":"+31854011786"},"status":1,"options":{"package_type":3,"delivery_type":2,"delivery_date":"2016-10-30T12:30:00.000+00:00","only_recipient":1,"signature":1,"return":0,"insurance":{"amount":5000,"currency":"USD"},"large_format":0,"label_description":"Iets"},"general_settings":{"save_recipient_address":0},"pickup":null,"customs_declaration":null,"physical_properties":null,"created":"2016-10-05
         20:48:07","modified":"2016-10-05 20:48:07","price":{"currency":"EUR","amount":0},"region":"NL"}],"results":5000,"page":1,"size":2}}'
-    http_version: 
+    http_version:
   recorded_at: Sun, 23 Oct 2016 12:02:25 GMT
 - request:
     method: post
@@ -134,7 +134,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"ids":[{"id":18923480}]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 09:49:31 GMT
 - request:
     method: post
@@ -171,6 +171,72 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"ids":[{"id":18923677},{"id":18923678}]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 27 Oct 2016 09:55:00 GMT
+- request:
+    method: delete
+    uri: https://api.myparcel.nl/shipments/18923677
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 27 Oct 2016 10:28:22 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Thu, 27 Oct 2016 10:27:51 GMT
+- request:
+    method: get
+    uri: https://api.myparcel.nl/shipments/18923677
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 27 Oct 2016 10:30:12 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"data":{"shipments":[],"results":5000,"page":1,"size":0}}'
+    http_version:
+  recorded_at: Thu, 27 Oct 2016 10:29:41 GMT
 recorded_with: VCR 3.0.3

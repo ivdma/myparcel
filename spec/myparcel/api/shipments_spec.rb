@@ -39,8 +39,6 @@ describe Myparcel::API::Shipments do
   end
 
   describe '#create' do
-    subject(:shipments) { described_class.new(authentication) }
-
     let(:shipment_hash) do
       {
         recipient: {
@@ -82,6 +80,20 @@ describe Myparcel::API::Shipments do
     describe '#headers_for_shipment' do
       it 'returns correct header for standard shipment' do
         expect(shipments.headers_for_shipment(:standard)).to eq 'application/vnd.shipment+json; charset=utf-8'
+      end
+    end
+  end
+
+  describe '#delete', :focus do
+    it 'raises if options[:shipment_ids] is empty' do
+      expect { shipments.delete }.to raise_error 'options[:shipment_ids] cannot be empty or nil'
+    end
+
+    it 'removes shipments' do
+      VCR.use_cassette :shipments, record: :new_episodes do
+        shipments.delete(shipment_ids: [18_923_677])
+
+        expect(shipments.find(shipment_ids: [18_923_677])).to be_empty
       end
     end
   end
