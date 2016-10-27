@@ -20,7 +20,7 @@ describe Myparcel::Client do
     subject(:client) { described_class.new('foo') }
 
     it 'is an instance of shipments' do
-      expect(client.shipments).to be_a Myparcel::Shipments
+      expect(client.shipments).to be_a Myparcel::API::Shipments
     end
   end
 end
