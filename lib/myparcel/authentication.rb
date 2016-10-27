@@ -22,5 +22,9 @@ module Myparcel
     def invalid?
       !valid?
     end
+
+    def host
+      'https://api.myparcel.nl'
+    end
   end
 end

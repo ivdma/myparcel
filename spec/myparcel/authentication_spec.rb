@@ -51,4 +51,10 @@ describe Myparcel::Authentication do
       expect(authentication.invalid?).to eq false
     end
   end
+
+  describe '#host' do
+    it 'has a hostname' do
+      expect(authentication.host).to eq 'https://api.myparcel.nl'
+    end
+  end
 end
