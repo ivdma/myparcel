@@ -61,6 +61,11 @@ describe Myparcel::API::Shipments do
       end
 
       describe 'status' do
+        it 'does something' do
+          VCR.use_cassette :shipments, record: :new_episodes do
+            expect(shipments.find(query: { status: 2 }).size).to eq 0
+          end
+        end
       end
     end
   end
