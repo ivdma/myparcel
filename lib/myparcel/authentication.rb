@@ -15,6 +15,8 @@ module Myparcel
       Base64.urlsafe_encode64(api_key)
     end
 
+    # Could have used api_key.present? but
+    # it wasn't avavailable in 1.9.3 yet for Object nor for String
     def valid?
       !api_key.nil? && api_key.size > 0
     end
