@@ -8,6 +8,13 @@ module Myparcel
       raise 'No credentials provided' if @authentication.invalid?
     end
 
+    # Get delivery options for an address
+    #
+    # == Usage:
+    #
+    # ```ruby
+    # client.delivery_options.find({...})
+    # ```
     def delivery_options
       @delivery_options ||= Myparcel::API::DeliveryOptions.new(authentication)
     end
@@ -18,14 +25,14 @@ module Myparcel
     #
     # Create shipments:
     #
-    # ```
+    # ```ruby
     # client = Myparcel.client('api_key')
     # client.shipments.create(shipments: [{...}])
     # ```
     #
     # Find shipments:
     #
-    # ```
+    # ```ruby
     # # returns all available shipments:
     # client.shipments.find
     #
