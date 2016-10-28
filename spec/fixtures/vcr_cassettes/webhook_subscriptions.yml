@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.myparcel.nl/webhook_subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"data":{"webhook_subscriptions":[{"hook":"shipment_status_change","url":"https://seoshop.nl/myparcel/notifications"}]}}'
+    headers:
+      Authorization:
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+      Content-Type:
+      - application/json; charset=utf-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Fri, 28 Oct 2016 10:56:05 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"data":{"ids":[{"id":84}]}}'
+    http_version: 
+  recorded_at: Fri, 28 Oct 2016 10:55:33 GMT
+- request:
+    method: get
+    uri: https://api.myparcel.nl/webhook_subscriptions/84
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Fri, 28 Oct 2016 10:58:27 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"data":{"webhook_subscriptions":[{"id":84,"account_id":104343,"shop_id":13812,"hook":"shipment_status_change","url":"https:\/\/seoshop.nl\/myparcel\/notifications"}]}}'
+    http_version: 
+  recorded_at: Fri, 28 Oct 2016 10:57:55 GMT
+recorded_with: VCR 3.0.3

@@ -13,6 +13,7 @@ require 'myparcel/api/base'
 require 'myparcel/api/delivery_options'
 require 'myparcel/api/shipments'
 require 'myparcel/api/tracktraces'
+require 'myparcel/api/webhook_subscriptions'
 
 # Ruby API Wrapper for https://api.myparcel.nl
 module Myparcel

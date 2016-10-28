@@ -8,8 +8,40 @@ module Myparcel
       raise 'No credentials provided' if @authentication.invalid?
     end
 
+    def delivery_options
+      @delivery_options ||= Myparcel::API::DeliveryOptions.new(authentication)
+    end
+
+    # Shipments management endpoint
+    #
+    # == Usage:
+    #
+    # Create shipments:
+    #
+    # ```
+    # client = Myparcel.client('api_key')
+    # client.shipments.create(shipments: [{...}])
+    # ```
+    #
+    # Find shipments:
+    #
+    # ```
+    # # returns all available shipments:
+    # client.shipments.find
+    #
+    # # returns shipments by id
+    # client.shipments.find(shipment_ids: [1, 2])
+    # ```
     def shipments
       @shipments ||= Myparcel::API::Shipments.new(authentication)
+    end
+
+    def tracktraces
+      @tracktraces ||= Myparcel::API::Tracktraces.new(authentication)
+    end
+
+    def webhooks
+      @webhooks ||= Myparcel::API::WebhookSubscriptions.new(authentication)
     end
   end
 end
