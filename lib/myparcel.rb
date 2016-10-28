@@ -1,4 +1,3 @@
-require 'active_interaction'
 require 'httparty'
 require 'virtus'
 require 'base64'
@@ -38,7 +37,7 @@ module Myparcel
     #
     # ```ruby
     # client = Myparcel.client('your-api-key')
-    # client.shipments.all
+    # client.shipments.find
     # ```
     def client(api_key = nil)
       @client ||= Myparcel::Client.new(api_key)
