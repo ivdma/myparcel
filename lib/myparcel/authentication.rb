@@ -16,7 +16,7 @@ module Myparcel
     end
 
     def valid?
-      api_key.present?
+      !api_key.nil? && api_key.size > 0
     end
 
     def invalid?
