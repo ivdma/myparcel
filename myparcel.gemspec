@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   # spec.add_development_dependency 'rubocop',       '~> 0.42'
   spec.add_development_dependency 'webmock',       '~> 1.24'
   spec.add_development_dependency 'vcr',           '~> 3.0'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'timecop'
-  spec.add_development_dependency 'dotenv'
+  spec.add_development_dependency 'pry',           '~> 0.10'
+  spec.add_development_dependency 'timecop',       '~> 0.8'
+  spec.add_development_dependency 'dotenv',        '~> 2.1'
 end
