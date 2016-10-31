@@ -5,6 +5,13 @@ describe Myparcel::API::Shipments do
 
   subject(:shipments) { described_class.new(authentication) }
 
+  describe '#all' do
+    it 'is an alias for #find' do
+      expect(shipments).to receive(:find)
+      shipments.all
+    end
+  end
+
   describe '#find' do
     context 'all' do
       let(:found_shipments) { shipments.find }

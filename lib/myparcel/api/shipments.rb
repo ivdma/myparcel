@@ -2,6 +2,10 @@ module Myparcel
   module API
     # Class for getting shipments
     class Shipments < Myparcel::API::Base
+      def all
+        find
+      end
+
       def find(options = {})
         shipment_ids = options.fetch(:shipment_ids, [])
         shipment_ids = shipment_ids.join(';') if shipment_ids.is_a?(Array)
