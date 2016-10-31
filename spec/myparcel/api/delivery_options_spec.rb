@@ -8,7 +8,7 @@ describe Myparcel::API::DeliveryOptions do
   describe '#find' do
     it 'finds delivery options' do
       VCR.use_cassette :delivery_options do
-        delivery_options.find query: { cc: 'NL', postal_code: '2131bc', number: 679, carrier: 'postnl' }
+        delivery_options.find cc: 'NL', postal_code: '2131bc', number: 679, carrier: 'postnl'
       end
     end
   end
