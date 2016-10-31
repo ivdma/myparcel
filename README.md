@@ -1,17 +1,15 @@
 [![Build Status](https://travis-ci.org/ivdma/myparcel.svg?branch=master)](https://travis-ci.org/ivdma/myparcel)
 
-# Myparcel
+# MyParcel Ruby gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/myparcel`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+MyParcel Ruby gem provides a wrapper for [MyParcel API](https://myparcelnl.github.io/api/)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'myparcel'
+gem 'myparcel', '~> 0.1'
 ```
 
 And then execute:
@@ -24,7 +22,88 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Client
+
+```ruby
+client = Myparcel.client('your-api-key')
+```
+
+### Shipments
+
+Getting shipments by id:
+
+```ruby
+client.shipments.find shipment_ids: [1, 2, 3]
+```
+
+Getting all shipments:
+
+```ruby
+client.shipments.all
+# or
+client.shipments.find
+```
+
+Creating shipments:
+
+```ruby
+shipment = {
+  recipient: {
+    cc: 'NL',
+    postal_code: '9999XX',
+    city: 'Amsterdam',
+    street: 'Hoofdstraat',
+    number: '1',
+    person: 'John Doe'
+  },
+  carrier: 1,
+  options: {
+    package_type: 1
+  },
+  status: 1
+}
+client.shipments.create shipments: [shipment]
+```
+
+Deleting shipments (at least one ID is required):
+
+```ruby
+client.shipments.delete shipment_ids: [1, 2, 3]
+```
+
+### Delivery options
+
+Get possible delivery options for an address:
+
+```ruby
+client.delivery_options.find cc: 'NL', postal_code: '2131bc', number: 679, carrier: 'postnl'
+```
+
+### Track and Trace
+
+Getting Track&Trace codes by shipment IDs:
+
+```ruby
+client.tracktraces.find shipment_ids: [1, 2, 3]
+```
+
+### Webhook subscriptions
+
+Creating a webhook:
+
+```ruby
+webhook = {
+  hook: "shipment_status_change",
+  url: "https://seoshop.nl/myparcel/notifications"
+}
+client.webhooks.create subscriptions: [webhook]
+```
+
+Getting webhook subscriptions (at least one subscription ID is required):
+
+```ruby
+client.webhooks.find subscription_ids: [1, 2, 3]
+```
 
 ## Development
 
