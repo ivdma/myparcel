@@ -11,26 +11,45 @@ module Myparcel
 
       protected
 
-      # rubocop:disable MethodLength
       def request(method, path, options = {})
         url = [authentication.host, path].join '/'
-        httparty_options = {
-          query: options.fetch(:query, {}),
-          body: options.fetch(:body, ''),
-          headers: authentication.headers.update(options[:headers] || {})
-        }
-        response = HTTParty.send method, url, httparty_options
+        uri = URI.parse(url)
 
-        case response.code
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl = true
+
+        case method
+        when :get
+          req = Net::HTTP::Get.new(uri.path)
+        when :post
+          req = Net::HTTP::Post.new(uri.path)
+        when :delete
+          req = Net::HTTP::Delete.new(uri.path)
+        else
+          raise 'Not support http method'
+        end
+
+        headers = authentication.headers.update(options[:headers] || {})
+
+        puts headers.inspect
+
+        req.add_field('Authorization', headers['Authorization']) unless headers['Authorization']
+
+        puts req.to_s
+
+        res = http.request(req)
+
+        puts res.body
+
+        case res.code
         when 200..201
           response
         when 422
-          raise "Unprocessable entity for `#{method} #{url}` with #{httparty_options}."
+          raise "Unprocessable entity for `#{method} #{url}` with #{options}."
         else
           raise 'Something went wrong'
         end
       end
-      # rubocop:enable MethodLength
 
       def headers_for_shipment(type)
         case type

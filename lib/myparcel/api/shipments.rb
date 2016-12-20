@@ -25,7 +25,7 @@ module Myparcel
         options[:headers]['Content-Type'] = headers_for_shipment(shipment_type)
 
         options[:body] ||= {}
-        options[:body] = JSON.generate(data: { shipments: shipments })
+        options[:body] = JSON.generate(:data => { :shipments => shipments })
 
         response = request :post, path, options
         response['data']['ids']

@@ -1,7 +1,6 @@
-require 'httparty'
-require 'virtus'
 require 'base64'
-require 'pry'
+require 'net/http'
+require 'net/https'
 
 require 'myparcel/version'
 

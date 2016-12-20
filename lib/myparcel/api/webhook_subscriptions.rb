@@ -13,7 +13,7 @@ module Myparcel
 
       def create(options = {})
         subscriptions = options.fetch(:subscriptions, [])
-        options[:body] = JSON.generate(data: { webhook_subscriptions: subscriptions })
+        options[:body] = JSON.generate(:data => { :webhook_subscriptions => subscriptions })
         options[:headers] ||= {}
         options[:headers]['Content-Type'] = 'application/json; charset=utf-8'
         response = request :post, path, options

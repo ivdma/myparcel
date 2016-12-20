@@ -12,13 +12,13 @@ module Myparcel
     end
 
     def auth_token
-      Base64.urlsafe_encode64(api_key)
+      Base64.encode64(api_key).delete("\n")
     end
 
     # Could have used api_key.present? but
     # it wasn't avavailable in 1.9.3 yet for Object nor for String
     def valid?
-      !api_key.nil? && api_key.size > 0
+      !api_key.nil? && !api_key.empty?
     end
 
     def invalid?
