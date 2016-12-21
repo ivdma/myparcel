@@ -19,11 +19,13 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'json'
+  spec.add_dependency 'json', '~> 1.8.1'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rspec', '~> 1.3.1'
-  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'public_suffix', '~> 1.3.1'
+  spec.add_development_dependency 'addressable', '~> 2.3.6'
+  spec.add_development_dependency 'webmock', '~> 1.20.4'
   spec.add_development_dependency 'dotenv'
   spec.add_development_dependency 'vcr', '~> 2.9.3'
 end

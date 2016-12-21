@@ -94,7 +94,7 @@ describe Myparcel::API::Shipments do
 
       it 'creates one shipment' do
         VCR.use_cassette :shipments_create_single_payment, :match_requests_on => [:body] do
-          created_shipments.should eql [{ 'id' => 20_126_870 }]
+          created_shipments.should eql [{ 'id' => 20_135_330 }]
         end
       end
     end
@@ -104,7 +104,7 @@ describe Myparcel::API::Shipments do
 
       it 'creates one shipment' do
         VCR.use_cassette :shipments_create_multiple_shipments, :match_requests_on => [:body] do
-          created_shipments.should eql [{ 'id' => 20_126_871 }, { 'id' => 20_126_872 }]
+          created_shipments.should eql [{ 'id' => 20_135_331 }, { 'id' => 20_135_332 }]
         end
       end
     end
@@ -117,11 +117,11 @@ describe Myparcel::API::Shipments do
 
     it 'removes shipments' do
       VCR.use_cassette :shipments_delete do
-        shipments.delete(:shipment_ids => [20_126_871])
+        shipments.delete(:shipment_ids => [20_135_331])
       end
 
       VCR.use_cassette :shipments_find_deleted do
-        shipments.find(:shipment_ids => [20_126_871]).should be_empty
+        shipments.find(:shipment_ids => [20_135_331]).should be_empty
       end
     end
   end

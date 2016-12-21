@@ -1,38 +1,38 @@
 --- 
-recorded_with: VCR 2.9.3
 http_interactions: 
 - request: 
     method: post
     uri: https://api.myparcel.nl/shipments
     body: 
-      string: "{\"data\":{\"shipments\":[{\"status\":1,\"carrier\":1,\"recipient\":{\"cc\":\"NL\",\"number\":\"1\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"person\":\"John Doe\"},\"options\":{\"package_type\":1}},{\"status\":1,\"carrier\":1,\"recipient\":{\"cc\":\"NL\",\"number\":\"1\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"person\":\"John Doe\"},\"options\":{\"package_type\":1}}]}}"
+      string: "{\"data\":{\"shipments\":[{\"status\":1,\"carrier\":1,\"recipient\":{\"cc\":\"NL\",\"person\":\"John Doe\",\"number\":\"1\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\"},\"options\":{\"package_type\":1}},{\"status\":1,\"carrier\":1,\"recipient\":{\"cc\":\"NL\",\"person\":\"John Doe\",\"number\":\"1\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\"},\"options\":{\"package_type\":1}}]}}"
     headers: 
       Authorization: 
       - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
-      Accept: 
-      - "*/*"
       Content-Type: 
       - application/vnd.shipment+json; charset=utf-8
+      Accept: 
+      - "*/*"
   response: 
     status: 
       code: 200
       message: OK
     headers: 
-      Connection: 
-      - keep-alive
-      X-Powered-By: 
-      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
-      Access-Control-Allow-Origin: 
-      - "*"
-      Date: 
-      - Wed, 21 Dec 2016 10:27:39 GMT
-      Content-Type: 
-      - application/json;charset=utf-8
       Server: 
       - nginx/1.8.1
+      Connection: 
+      - keep-alive
+      Access-Control-Allow-Origin: 
+      - "*"
       Transfer-Encoding: 
       - chunked
+      Content-Type: 
+      - application/json;charset=utf-8
+      Date: 
+      - Wed, 21 Dec 2016 13:14:10 GMT
+      X-Powered-By: 
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
     body: 
-      string: "{\"data\":{\"ids\":[{\"id\":20126871},{\"id\":20126872}]}}"
+      string: "{\"data\":{\"ids\":[{\"id\":20135331},{\"id\":20135332}]}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2016 10:28:35 GMT
+  recorded_at: Wed, 21 Dec 2016 13:15:07 GMT
+recorded_with: VCR 2.9.3
