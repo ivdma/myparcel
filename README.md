@@ -33,7 +33,7 @@ client = Myparcel.client('your-api-key')
 Getting shipments by id:
 
 ```ruby
-client.shipments.find shipment_ids: [1, 2, 3]
+client.shipments.find :shipment_ids => [1, 2, 3]
 ```
 
 Getting all shipments:
@@ -48,27 +48,27 @@ Creating shipments:
 
 ```ruby
 shipment = {
-  recipient: {
-    cc: 'NL',
-    postal_code: '9999XX',
-    city: 'Amsterdam',
-    street: 'Hoofdstraat',
-    number: '1',
-    person: 'John Doe'
+  :recipient => {
+    :cc => 'NL',
+    :postal_code => '9999XX',
+    :city => 'Amsterdam',
+    :street => 'Hoofdstraat',
+    :number => '1',
+    :person => 'John Doe'
   },
-  carrier: 1,
-  options: {
-    package_type: 1
+  :carrier => 1,
+  :options => {
+    :package_type => 1
   },
-  status: 1
+  :status => 1
 }
-client.shipments.create shipments: [shipment]
+client.shipments.create :shipments => [shipment]
 ```
 
 Deleting shipments (at least one ID is required):
 
 ```ruby
-client.shipments.delete shipment_ids: [1, 2, 3]
+client.shipments.delete :shipment_ids => [1, 2, 3]
 ```
 
 ### Delivery options
@@ -76,7 +76,7 @@ client.shipments.delete shipment_ids: [1, 2, 3]
 Get possible delivery options for an address:
 
 ```ruby
-client.delivery_options.find cc: 'NL', postal_code: '2131bc', number: 679, carrier: 'postnl'
+client.delivery_options.find :cc => 'NL', :postal_code => '2131bc', :number => 679, :carrier => 'postnl'
 ```
 
 ### Track and Trace
@@ -84,7 +84,7 @@ client.delivery_options.find cc: 'NL', postal_code: '2131bc', number: 679, carri
 Getting Track&Trace codes by shipment IDs:
 
 ```ruby
-client.tracktraces.find shipment_ids: [1, 2, 3]
+client.tracktraces.find :shipment_ids => [1, 2, 3]
 ```
 
 ### Webhook subscriptions
@@ -93,16 +93,16 @@ Creating a webhook:
 
 ```ruby
 webhook = {
-  hook: "shipment_status_change",
-  url: "https://seoshop.nl/myparcel/notifications"
+  :hook => "shipment_status_change",
+  :url => "https://seoshop.nl/myparcel/notifications"
 }
-client.webhooks.create subscriptions: [webhook]
+client.webhooks.create :subscriptions => [webhook]
 ```
 
 Getting webhook subscriptions (at least one subscription ID is required):
 
 ```ruby
-client.webhooks.find subscription_ids: [1, 2, 3]
+client.webhooks.find :subscription_ids => [1, 2, 3]
 ```
 
 ## Development
@@ -113,7 +113,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/myparcel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/paypronl/myparcel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
