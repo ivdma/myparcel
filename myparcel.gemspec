@@ -6,12 +6,12 @@ require 'myparcel/version'
 Gem::Specification.new do |spec|
   spec.name          = 'myparcel'
   spec.version       = Myparcel::VERSION
-  spec.authors       = ['Ivan Malykh']
-  spec.email         = ['ivan@lesslines.com']
+  spec.authors       = ['Ivan Malykh', 'Leon van der Velde']
+  spec.email         = ['ivan@lesslines.com', 'leon@paypro.nl']
 
   spec.summary       = 'MyParcel API Ruby wrapper.'
   spec.description   = 'Ruby wrapper for MyParcel API.'
-  spec.homepage      = 'https://github.com/ivdma/myparcel'
+  spec.homepage      = 'https://github.com/paypro/myparcel'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -22,11 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'json'
 
   spec.add_development_dependency 'bundler'
-  # spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec', '~> 1.3.1'
-  # spec.add_development_dependency 'guard-bundler', '~> 2.1'
-  # spec.add_development_dependency 'guard-rspec',   '~> 4.7'
-  # spec.add_development_dependency 'guard-rubocop'
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency 'dotenv'
   spec.add_development_dependency 'vcr', '~> 2.9.3'
