@@ -1,0 +1,67 @@
+--- 
+recorded_with: VCR 2.9.3
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.myparcel.nl/webhook_subscriptions/84
+    body: 
+      string: ""
+    headers: 
+      Accept: 
+      - "*/*"
+      Authorization: 
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+  response: 
+    status: 
+      code: 401
+      message: Unauthorized
+    headers: 
+      Server: 
+      - nginx/1.8.1
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      Date: 
+      - Wed, 21 Dec 2016 10:27:42 GMT
+      X-Powered-By: 
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Content-Type: 
+      - application/json;charset=utf-8
+    body: 
+      string: "{\"errors\":[{\"code\":3001}],\"message\":\"Permission Denied. (readWebhookSubscriptionOwnedByOthers)\"}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2016 10:28:37 GMT
+- request: 
+    method: get
+    uri: https://api.myparcel.nl/webhook_subscriptions/955
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - nginx/1.8.1
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      Date: 
+      - Wed, 21 Dec 2016 10:34:54 GMT
+      Access-Control-Allow-Origin: 
+      - "*"
+      X-Powered-By: 
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Content-Type: 
+      - application/json;charset=utf-8
+    body: 
+      string: "{\"data\":{\"webhook_subscriptions\":[{\"id\":955,\"account_id\":104343,\"shop_id\":13812,\"hook\":\"shipment_status_change\",\"url\":\"https:\\/\\/seoshop.nl\\/myparcel\\/notifications\"}]}}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2016 10:35:50 GMT

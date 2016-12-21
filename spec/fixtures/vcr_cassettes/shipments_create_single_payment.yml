@@ -2,15 +2,17 @@
 recorded_with: VCR 2.9.3
 http_interactions: 
 - request: 
-    method: get
-    uri: https://api.myparcel.nl/tracktraces/18567773
+    method: post
+    uri: https://api.myparcel.nl/shipments
     body: 
-      string: ""
+      string: "{\"data\":{\"shipments\":[{\"status\":1,\"carrier\":1,\"recipient\":{\"cc\":\"NL\",\"number\":\"1\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"person\":\"John Doe\"},\"options\":{\"package_type\":1}}]}}"
     headers: 
       Authorization: 
       - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
       Accept: 
       - "*/*"
+      Content-Type: 
+      - application/vnd.shipment+json; charset=utf-8
   response: 
     status: 
       code: 200
@@ -23,7 +25,7 @@ http_interactions:
       Access-Control-Allow-Origin: 
       - "*"
       Date: 
-      - Wed, 21 Dec 2016 10:27:42 GMT
+      - Wed, 21 Dec 2016 10:27:38 GMT
       Content-Type: 
       - application/json;charset=utf-8
       Server: 
@@ -31,6 +33,6 @@ http_interactions:
       Transfer-Encoding: 
       - chunked
     body: 
-      string: "{\"data\":{\"tracktraces\":[[]]}}"
+      string: "{\"data\":{\"ids\":[{\"id\":20126870}]}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2016 10:28:37 GMT
+  recorded_at: Wed, 21 Dec 2016 10:28:34 GMT

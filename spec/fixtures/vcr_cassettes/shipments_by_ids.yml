@@ -1,0 +1,36 @@
+--- 
+recorded_with: VCR 2.9.3
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.myparcel.nl/shipments/18567773;18567775
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Connection: 
+      - keep-alive
+      X-Powered-By: 
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin: 
+      - "*"
+      Date: 
+      - Wed, 21 Dec 2016 10:27:37 GMT
+      Content-Type: 
+      - application/json;charset=utf-8
+      Server: 
+      - nginx/1.8.1
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"data\":{\"shipments\":[{\"barcode\":null,\"id\":18567773,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"cc\":\"NL\",\"postal_code\":\"9999ZZ\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"street_additional_info\":\"\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Foo\",\"company\":\"\",\"email\":\"\",\"phone\":\"\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":3,\"delivery_type\":2,\"delivery_date\":\"2016-10-30T12:30:00.000+00:00\",\"only_recipient\":1,\"signature\":1,\"return\":0,\"insurance\":{\"amount\":5000,\"currency\":\"USD\"},\"large_format\":0,\"label_description\":\"Iets\"},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-10-05 20:47:28\",\"modified\":\"2016-10-05 20:47:28\",\"price\":{\"currency\":\"EUR\",\"amount\":0},\"region\":\"NL\"},{\"barcode\":null,\"id\":18567775,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"cc\":\"NL\",\"postal_code\":\"9999ZZ\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"street_additional_info\":\"\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Foo\",\"company\":\"\",\"email\":\"\",\"phone\":\"\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":3,\"delivery_type\":2,\"delivery_date\":\"2016-10-30T12:30:00.000+00:00\",\"only_recipient\":1,\"signature\":1,\"return\":0,\"insurance\":{\"amount\":5000,\"currency\":\"USD\"},\"large_format\":0,\"label_description\":\"Iets\"},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-10-05 20:48:07\",\"modified\":\"2016-10-05 20:48:07\",\"price\":{\"currency\":\"EUR\",\"amount\":0},\"region\":\"NL\"}],\"results\":5000,\"page\":1,\"size\":2}}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2016 10:28:33 GMT

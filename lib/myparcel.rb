@@ -1,6 +1,9 @@
 require 'base64'
+require 'cgi'
 require 'net/http'
 require 'net/https'
+
+require 'json'
 
 require 'myparcel/version'
 

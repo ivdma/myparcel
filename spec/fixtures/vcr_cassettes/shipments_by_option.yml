@@ -1,0 +1,36 @@
+--- 
+recorded_with: VCR 2.9.3
+http_interactions: 
+- request: 
+    method: get
+    uri: https://api.myparcel.nl/shipments?q=575
+    body: 
+      string: ""
+    headers: 
+      Authorization: 
+      - basic NzFmOWZmODIyYmZmMGI3MWFmYjM1YzAxMWNiOGJjODY1MGQ0YmExOQ==
+      Accept: 
+      - "*/*"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Connection: 
+      - keep-alive
+      X-Powered-By: 
+      - PHP/5.6.23-1+deprecated+dontuse+deb.sury.org~trusty+1
+      Access-Control-Allow-Origin: 
+      - "*"
+      Date: 
+      - Wed, 21 Dec 2016 10:27:38 GMT
+      Content-Type: 
+      - application/json;charset=utf-8
+      Server: 
+      - nginx/1.8.1
+      Transfer-Encoding: 
+      - chunked
+    body: 
+      string: "{\"data\":{\"shipments\":[{\"barcode\":null,\"id\":20126196,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"street\":\"Hoofdstraat\",\"number\":\"1\",\"person\":\"John Doe\",\"cc\":\"NL\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":1},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-12-21 11:14:07\",\"modified\":\"2016-12-21 11:14:07\",\"price\":{\"currency\":\"EUR\",\"amount\":575},\"region\":\"NL\"},{\"barcode\":null,\"id\":20125986,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"street\":\"Hoofdstraat\",\"number\":\"1\",\"person\":\"John Doe\",\"cc\":\"NL\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":1},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-12-21 11:11:56\",\"modified\":\"2016-12-21 11:11:56\",\"price\":{\"currency\":\"EUR\",\"amount\":575},\"region\":\"NL\"},{\"barcode\":null,\"id\":18952733,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"cc\":\"NL\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"number\":\"1\",\"person\":\"John Doe\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":1},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-10-28 15:15:18\",\"modified\":\"2016-10-28 15:15:18\",\"price\":{\"currency\":\"EUR\",\"amount\":575},\"region\":\"NL\"},{\"barcode\":null,\"id\":18923678,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"cc\":\"NL\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"number\":\"1\",\"person\":\"John Doe\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":1},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-10-27 11:55:32\",\"modified\":\"2016-10-27 11:55:32\",\"price\":{\"currency\":\"EUR\",\"amount\":575},\"region\":\"NL\"},{\"barcode\":null,\"id\":18923480,\"parent_id\":null,\"account_id\":104343,\"shop_id\":13812,\"shipment_type\":1,\"recipient\":{\"cc\":\"NL\",\"postal_code\":\"9999XX\",\"city\":\"Amsterdam\",\"street\":\"Hoofdstraat\",\"number\":\"1\",\"person\":\"John Doe\"},\"sender\":{\"cc\":\"NL\",\"postal_code\":\"9711AP\",\"city\":\"Groningen\",\"street\":\"Emmaplein\",\"number\":\"1\",\"number_suffix\":\"\",\"person\":\"Henk Jan Wils\",\"company\":\"PayPro BV\",\"email\":\"henkjan@paypro.nl\",\"phone\":\"+31854011786\"},\"status\":1,\"options\":{\"package_type\":1},\"general_settings\":{\"save_recipient_address\":0},\"pickup\":null,\"customs_declaration\":null,\"physical_properties\":null,\"created\":\"2016-10-27 11:50:03\",\"modified\":\"2016-10-27 11:50:03\",\"price\":{\"currency\":\"EUR\",\"amount\":575},\"region\":\"NL\"}],\"results\":5,\"page\":1,\"size\":5}}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2016 10:28:33 GMT

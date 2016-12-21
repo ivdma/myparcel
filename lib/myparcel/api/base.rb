@@ -18,36 +18,43 @@ module Myparcel
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
 
-        case method
-        when :get
-          req = Net::HTTP::Get.new(uri.path)
-        when :post
-          req = Net::HTTP::Post.new(uri.path)
-        when :delete
-          req = Net::HTTP::Delete.new(uri.path)
-        else
-          raise 'Not support http method'
-        end
-
+        req = get_request_object(method, uri, options[:query] || {})
         headers = authentication.headers.update(options[:headers] || {})
 
-        puts headers.inspect
+        headers.each do |k, v|
+          req.add_field(k, v) unless v.nil?
+        end
 
-        req.add_field('Authorization', headers['Authorization']) unless headers['Authorization']
-
-        puts req.to_s
+        req.body = options[:body] || ''
 
         res = http.request(req)
-
-        puts res.body
-
-        case res.code
+        case res.code.to_i
         when 200..201
-          response
+          res.body == '' || res.body.nil? ? '' : JSON.parse(res.body)
         when 422
-          raise "Unprocessable entity for `#{method} #{url}` with #{options}."
+          raise "Unprocessable entity for `#{method} #{url}` with #{options.inspect}."
         else
           raise 'Something went wrong'
+        end
+      end
+
+      def query_params(params)
+        params.map do |k, v|
+          "#{k}=#{CGI.escape(v.to_s)}"
+        end.join('&')
+      end
+
+      def get_request_object(method, uri, params)
+        path = "#{uri.path}?#{query_params(params)}"
+        case method
+        when :get
+          Net::HTTP::Get.new(path)
+        when :post
+          Net::HTTP::Post.new(path)
+        when :delete
+          Net::HTTP::Delete.new(path)
+        else
+          raise 'Not support http method'
         end
       end
 

@@ -2,6 +2,6 @@ require 'spec_helper'
 
 describe Myparcel do
   it 'has a version number' do
-    expect(Myparcel::VERSION).not_to be nil
+    Myparcel::VERSION.should_not be_nil
   end
 end
