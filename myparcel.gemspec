@@ -19,12 +19,15 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'json'
+
   spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake'
+  # spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec', '~> 1.3.1'
   # spec.add_development_dependency 'guard-bundler', '~> 2.1'
   # spec.add_development_dependency 'guard-rspec',   '~> 4.7'
   # spec.add_development_dependency 'guard-rubocop'
   spec.add_development_dependency 'webmock'
-  # spec.add_development_dependency 'dotenv',        '~> 2.1'
+  spec.add_development_dependency 'dotenv'
+  spec.add_development_dependency 'vcr', '~> 2.9.3'
 end
