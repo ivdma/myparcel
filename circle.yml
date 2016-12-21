@@ -4,5 +4,5 @@ machine:
 test:
   override:
     - bundle exec spec:
-      files:
-        - spec/**/*_spec.rb
+        files:
+          - spec/**/*_spec.rb
