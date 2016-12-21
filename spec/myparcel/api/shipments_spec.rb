@@ -93,7 +93,7 @@ describe Myparcel::API::Shipments do
       let(:created_shipments) { shipments.create :shipments => [shipment_hash] }
 
       it 'creates one shipment' do
-        VCR.use_cassette :shipments_create_single_payment, :match_requests_on => [:body] do
+        VCR.use_cassette :shipments_create_single_payment do
           created_shipments.should eql [{ 'id' => 20_135_330 }]
         end
       end
@@ -103,7 +103,7 @@ describe Myparcel::API::Shipments do
       let(:created_shipments) { shipments.create :shipments => [shipment_hash, shipment_hash] }
 
       it 'creates one shipment' do
-        VCR.use_cassette :shipments_create_multiple_shipments, :match_requests_on => [:body] do
+        VCR.use_cassette :shipments_create_multiple_shipments do
           created_shipments.should eql [{ 'id' => 20_135_331 }, { 'id' => 20_135_332 }]
         end
       end
